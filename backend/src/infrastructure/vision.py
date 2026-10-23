@@ -37,15 +37,7 @@ from ..domain.creative import (
 
 class VisionEngine:
     """
-    Multi-Tool Vision Engine implementing the Strategy Pattern.
-    Executes dedicated lightweight pipelines for:
-    - Ergonomics (FaceMesh + Pose)
-    - Fitness / Rep Counter (Pose)
-    - Gesture Recognition (Hands)
-    - Focus / Attention Tracker (FaceMesh)
-    - AirTheremin (Hands Spatial Audio)
-    - HoloWindow (FaceMesh 3D Parallax Head-Tracking)
-    - CyberMatrix (Real-time ASCII Art)
+    Motor central de processamento visual para extração de métricas faciais, posturais e gestuais.
     """
 
     # FaceMesh Indices

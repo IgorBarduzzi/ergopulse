@@ -592,7 +592,7 @@ export const SoundGoSynth: React.FC<SoundGoSynthProps> = ({
 
           const isPlaying = activeDegree >= 1 && activeDegree <= 7;
 
-          // 1. Warm Amber Atmospheric Glow when playing a chord (like Screenshot 1)
+          // Brilho atmosférico ao tocar acorde
           if (isPlaying) {
             const grad = ctx.createRadialGradient(W * 0.5, H * 0.5, 40, W * 0.5, H * 0.5, W * 0.65);
             grad.addColorStop(0, "rgba(245, 158, 11, 0.22)");
@@ -602,7 +602,7 @@ export const SoundGoSynth: React.FC<SoundGoSynthProps> = ({
             ctx.fillRect(0, 0, W, H);
           }
 
-          // 2. Render 21 Glowing White Dots on each detected hand (Exact indecisiveeric aesthetic)
+          // Renderiza os 21 pontos rastreados em cada mão
           const drawHandConstellation = (hand: HandData | null) => {
             if (!hand || !hand.landmarks || hand.landmarks.length === 0) return;
 
@@ -708,7 +708,7 @@ export const SoundGoSynth: React.FC<SoundGoSynthProps> = ({
     return () => cancelAnimationFrame(animId);
   }, [leftHand, rightHand, activeDegree, expressionLevel]);
 
-  // Scale rows displayed top-to-bottom from VII down to I (just like indecisiveeric.com/gesture-synth)
+  // Exibe linhas da escala de VII a I
   const leftHandRows = useMemo(() => {
     const gestureBadges: Record<number, { text: string; isEmoji?: boolean }> = {
       7: { text: "🤟", isEmoji: true },

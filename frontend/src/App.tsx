@@ -958,7 +958,7 @@ export default function App() {
           )}
 
           {/* ======================================================== */}
-          {/* 4. SOUNDGO AIR SYNTH (Reference: sound.gojaehyun.com)    */}
+          {/* 4. SOUNDGO AIR SYNTH */}
           {/* ======================================================== */}
           {activeTool === "theremin" && (
             <div className="space-y-6">
